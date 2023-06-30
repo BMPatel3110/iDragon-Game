@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    overflow: hidden;
+}
+
+.gameContainer{
+    background-image: url(bg1.avif);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+    
+}
+
+.gameOver{
+    position: relative;
+    top: 6vh;
+    font-size: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    color: red;
+}
+
+.dino{
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 104px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+.obstacle{
+    background-image: url(dragon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 2px;
+    left: 80vw;
+    width: 175px;
+    height: 113px;
+}
+
+.scoreCount{
+    position: relative;
+    top: -5vh;
+    font-size: 25px;
+    left: 86vw;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    font-family: sans-serif;
+    color: aliceblue;
+}
+ .scoreCountFinal{
+    position: relative;
+    top: 15vh;
+    font-size: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    color: aliceblue;
+} 
+
+.animateDino{
+    animation: dino 0.8s linear;
+}
+
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+
+    50%{
+        bottom: 300px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+
+}
+
+.animateDragon{
+    animation: dragon 3.5s linear infinite;
+}
+
+@keyframes dragon{
+    0%{
+        left: 100vw;
+    }
+
+    100%{
+        left: 0vw;
+    }
+}
